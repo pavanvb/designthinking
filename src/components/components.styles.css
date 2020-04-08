@@ -1,0 +1,72 @@
+/*CarouselComponent Start*/
+.c-outer{
+    position: absolute;
+    /* margin-top: 100px;
+    margin-left: 350px;
+    margin-right: 150px; */
+    align-items: center;
+    margin-top:-800px;
+    margin-left: 410px;
+    width: 1024px;
+    height: 700px;
+    background:linear-gradient(
+        to left,
+        rgba(7,27,82,1) 0%,
+        rgba(0,128,128,1) 100%
+      );
+}
+
+.c-item{
+    width: 1024px;
+    height: 720px;
+}
+
+.c-img{
+    width: 1024px;
+    height: 570px;
+}
+
+.text{
+    color:white;
+    font-family: "Times New Roman";
+    font-size: 3vh;
+}
+/*CarouselComponent end
+
+/*HeadingComponent start*/
+.head1{
+    font-family: "Bigelow Rules";
+    position: absolute;
+    color: white;
+    margin-top: -10px;
+}
+/*HeadingCompenent end*/
+
+/*ParticlesComponent start*/
+.particles{
+    z-index: -1;
+    background-size: cover;
+    height:1024px;
+    width:auto;
+    /* position: absolute; */
+  }
+/*ParticlesComponent end*/
+
+/*NavBarComponent start*/
+.navbar{
+    background:linear-gradient(
+        to left,
+        rgba(7,27,82,1) 0%,
+        rgba(0,128,128,1) 100%
+      );
+    color:white;
+}
+
+.text1{
+    font-family: "Times New Roman";
+    font-size: 2vh;
+    font-weight: bold;
+}
+
+
+/*NavBarComponent end*/
