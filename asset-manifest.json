@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/designthinking/static/css/main.b5941836.chunk.css",
+    "main.js": "/designthinking/static/js/main.bc24b20c.chunk.js",
+    "main.js.map": "/designthinking/static/js/main.bc24b20c.chunk.js.map",
+    "runtime-main.js": "/designthinking/static/js/runtime-main.6c53709e.js",
+    "runtime-main.js.map": "/designthinking/static/js/runtime-main.6c53709e.js.map",
+    "static/css/2.de424728.chunk.css": "/designthinking/static/css/2.de424728.chunk.css",
+    "static/js/2.aa8bfa96.chunk.js": "/designthinking/static/js/2.aa8bfa96.chunk.js",
+    "static/js/2.aa8bfa96.chunk.js.map": "/designthinking/static/js/2.aa8bfa96.chunk.js.map",
+    "index.html": "/designthinking/index.html",
+    "precache-manifest.9c5ea4103fdb5f5c3845ed605bd938e2.js": "/designthinking/precache-manifest.9c5ea4103fdb5f5c3845ed605bd938e2.js",
+    "service-worker.js": "/designthinking/service-worker.js",
+    "static/css/2.de424728.chunk.css.map": "/designthinking/static/css/2.de424728.chunk.css.map",
+    "static/css/main.b5941836.chunk.css.map": "/designthinking/static/css/main.b5941836.chunk.css.map",
+    "static/js/2.aa8bfa96.chunk.js.LICENSE.txt": "/designthinking/static/js/2.aa8bfa96.chunk.js.LICENSE.txt",
+    "static/media/img1.jpeg": "/designthinking/static/media/img1.4f6b3dae.jpeg",
+    "static/media/img2.jpeg": "/designthinking/static/media/img2.8c5a438d.jpeg",
+    "static/media/pr.jpg": "/designthinking/static/media/pr.5912d91d.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6c53709e.js",
+    "static/css/2.de424728.chunk.css",
+    "static/js/2.aa8bfa96.chunk.js",
+    "static/css/main.b5941836.chunk.css",
+    "static/js/main.bc24b20c.chunk.js"
+  ]
+}
