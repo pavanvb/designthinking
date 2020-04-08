@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "adf3b4149d43adaf6e14d4ce145e4db9",
+    "revision": "f2b13e5003e4e68fc91487c0d8d6af4d",
     "url": "/designthinking/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/designthinking/static/css/2.de424728.chunk.css"
   },
   {
-    "revision": "65ec1ec7b37d2bafff55",
-    "url": "/designthinking/static/css/main.31e7f9eb.chunk.css"
+    "revision": "ff05119d19f7ef32fdf2",
+    "url": "/designthinking/static/css/main.a79e98ba.chunk.css"
   },
   {
     "revision": "50ec509ddbbf2d064475",
@@ -20,7 +20,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/designthinking/static/js/2.aa8bfa96.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "65ec1ec7b37d2bafff55",
+    "revision": "ff05119d19f7ef32fdf2",
     "url": "/designthinking/static/js/main.bc24b20c.chunk.js"
   },
   {
