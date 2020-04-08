@@ -1,7 +1,7 @@
 .App{
     margin-top: 0px;
     width: auto;
-    height: 1700px;
+    height: 1024px;
     
       background: linear-gradient(
     to left,
@@ -11,13 +11,6 @@
  
 }
 
-.App-header {
-  background-color: rgba(5,20,30,1);
-  height: 100vh;
-  width:auto;
-  min-height: 100vh;
-  color: white;
-}
 .head1{
   margin-top: 30vh;
   margin-left: 32vw;
