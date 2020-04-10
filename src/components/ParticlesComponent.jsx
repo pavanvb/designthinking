@@ -9,7 +9,7 @@ function ParticelsComponent() {
                 params={{
                     "particles": {
                         "number": {
-                            "value": 200
+                            "value": 300
                         },
                         "size": {
                             "value": 4

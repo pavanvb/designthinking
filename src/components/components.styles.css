@@ -8,10 +8,11 @@
     margin-top:-800px;
     margin-left: 410px;
     width: 1024px;
-    height: 700px;
+    height: auto;
     background:linear-gradient(
         to left,
         rgba(7,27,82,1) 0%,
+         
         rgba(0,128,128,1) 100%
       );
 }
