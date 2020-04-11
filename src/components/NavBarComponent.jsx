@@ -13,6 +13,7 @@ function NavBarComponent(props) {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
                         <Nav.Link href="#chart" className="text1">DataPlots</Nav.Link>
+                        <Nav.Link href="#built-using" className="text1">Build Info.</Nav.Link>
                         <NavDropdown title="Links" id="basic-nav-dropdown">
                             <NavDropdown.Item href="https://www.google.com/" className="text1">Google</NavDropdown.Item>
                             <NavDropdown.Item href="https://react-bootstrap.github.io/" className="text1">React Bootstrap</NavDropdown.Item>

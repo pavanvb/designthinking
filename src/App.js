@@ -6,6 +6,7 @@ import HeadingComponent from './components/HeadingComponent';
 import ParticlesComponent from './components/ParticlesComponent';
 import NavBarComponent from './components/NavBarComponent';
 import ChartComponent from './components/ChartComp.jsx'
+import IconComponent from './components/IconComponent.jsx'
 import { PlotData_1 as PData1 } from './components/PlotData'
 import { PlotData_2 as PData2 } from './components/PlotData'
 import axios from 'axios';
@@ -29,7 +30,7 @@ class App extends React.PureComponent {
     this.setState({ plotData1: PData1 })
     this.setState({ plotData2: PData2 })
     setInterval(() => {
-      if (this.state.i > 10) console.log("over")
+      if (this.state.i > 15) return;
       else
         axios.get(`https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=579b464db66ec23bdd000001cdd3946e44ce4aad7209ff7b23ac571b&format=json&offset=${this.state.x}&limit=10`)
           .then(response => {
@@ -41,10 +42,9 @@ class App extends React.PureComponent {
           })
           .catch(error => console.log(error))
     },
-      5000
+      2500
     )
   }
-
 
   render() {
 
@@ -58,6 +58,7 @@ class App extends React.PureComponent {
     const minPriceOfTomato = filteredAgriData.map(data => data.min_price);
     const maxPriceOfTomato = filteredAgriData.map(data => data.max_price);
     const modalPriceOfTomato = filteredAgriData.map(data => data.modal_price);
+    const districtData = filteredAgriData.map(data => data.district);
 
     const soilFertilityArray1 = plotData1.map(ele => ele.soil_fertility);
     const totalRevenueArray1 = plotData1.map(ele => ele.total_revenue);
@@ -68,7 +69,7 @@ class App extends React.PureComponent {
     const totalRevenueArray2 = plotData2.map(ele => ele.total_revenue);
 
     const data3 = {
-      labels: ['Chittor', 'Kurnool', 'Bilaspr', 'Durg', 'Raigarh', 'Ahmedabad', 'Anand', 'Bharuch'],
+      labels: districtData,
       datasets: [
         {
           label: "MinPriceOfTomato(in INR)",
@@ -160,7 +161,6 @@ class App extends React.PureComponent {
       ]
     }
 
-
     const data1 = {
       labels: soilFertilityArray1,
       datasets: [
@@ -204,7 +204,6 @@ class App extends React.PureComponent {
 
     return (
       <div className="App">
-
         <NavBarComponent />
         <HeadingComponent name="Design Thinking Phase 3" />
         <ParticlesComponent />
@@ -219,7 +218,11 @@ class App extends React.PureComponent {
         <div className="chart3" id="chart">
           <ChartComponent data={data3} options={options3} />
         </div>
-      </div>
+        <h1 className="built-using" id="built-using">Built Using ReactJS, NodeJS, NPM</h1>
+        <div className="icon" >
+          <IconComponent />
+        </div>
+      </div >
 
     )
 
