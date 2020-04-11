@@ -27,8 +27,8 @@ function ParticlesComponent(props) {
                     }
                 }
                 }
-                width= "1800px"
-            height="220vh"
+                width= "2100px"
+            height="260vh"
             />
         </div>
     )

@@ -6,8 +6,8 @@
     margin-right: 150px; */
     align-items: center;
     margin-top:-800px;
-    margin-left: 510px;
-    width: 1024px;
+    margin-left: 530px;
+    width: 1224px;
     height: auto;
     background:linear-gradient(
         to left,
@@ -18,13 +18,13 @@
 }
 
 .c-item{
-    width: 1024px;
+    width: 1224px;
     height: 720px;
 }
 
 .c-img{
-    width: 1024px;
-    height: 570px;
+    width: 1224px;
+    height: 550px;
 }
 
 .text{
@@ -49,8 +49,9 @@
 .particles{
     z-index: -1;
     background-size: cover;
-    height:1024px;
+    height:100vh;
     width:auto;
+    margin-left: 50px;
     /* position: absolute; */
   }
 /*ParticlesComponent end*/
