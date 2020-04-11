@@ -11,7 +11,7 @@ import { PlotData_2 as PData2 } from './components/PlotData'
 import axios from 'axios';
 
 
-class App extends React.Component {
+class App extends React.PureComponent {
   constructor(props) {
     super(props)
 
@@ -54,8 +54,6 @@ class App extends React.Component {
       if (data.commodity === "Tomato")
         return data;
     });
-
-    console.log(filteredAgriData);
 
     const minPriceOfTomato = filteredAgriData.map(data => data.min_price);
     const maxPriceOfTomato = filteredAgriData.map(data => data.max_price);

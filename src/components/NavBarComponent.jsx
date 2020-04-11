@@ -3,7 +3,8 @@ import './components.styles.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Navbar, NavDropdown, Nav } from 'react-bootstrap'
 
-function NavBarComponent() {
+function NavBarComponent(props) {
+    console.log("NavBarComponent");
     return (
         <>
             <Navbar className="navbar" expand="lg">
@@ -24,4 +25,4 @@ function NavBarComponent() {
     )
 }
 
-export default NavBarComponent
+export default React.memo(NavBarComponent)

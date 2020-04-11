@@ -3,6 +3,7 @@ import './components.styles.css'
 import {Line} from 'react-chartjs-2'
 
 function ChartComponent(props) {
+    console.log("ChartComponent");
     return (
         <Line data={props.data} options={props.options} />
 
@@ -10,4 +11,4 @@ function ChartComponent(props) {
 
 }
 
-export default ChartComponent
+export default React.memo(ChartComponent)
