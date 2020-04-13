@@ -30,8 +30,8 @@ class App extends React.PureComponent {
     this.setState({ plotData1: PData1 })
     this.setState({ plotData2: PData2 })
     setInterval(() => {
-      if (this.state.i > 15) return;
-      else
+      if (this.state.i > 18) return;
+      else {
         axios.get(`https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=579b464db66ec23bdd000001cdd3946e44ce4aad7209ff7b23ac571b&format=json&offset=${this.state.x}&limit=10`)
           .then(response => {
             this.setState({
@@ -41,8 +41,9 @@ class App extends React.PureComponent {
             });
           })
           .catch(error => console.log(error))
+      }
     },
-      2500
+      3500
     )
   }
 
@@ -50,15 +51,24 @@ class App extends React.PureComponent {
 
     const { plotData1, plotData2, agriData } = this.state;
 
-    const filteredAgriData = agriData.filter(data => {
+    const tomatoData = agriData.filter(data => {
       if (data.commodity === "Tomato")
         return data;
     });
+    const paddyData = agriData.filter(data => {
+      if (data.commodity === "Paddy(Dhan)(Common)")
+        return data;
+    });
 
-    const minPriceOfTomato = filteredAgriData.map(data => data.min_price);
-    const maxPriceOfTomato = filteredAgriData.map(data => data.max_price);
-    const modalPriceOfTomato = filteredAgriData.map(data => data.modal_price);
-    const districtData = filteredAgriData.map(data => data.district);
+    const minPriceOfPaddy = paddyData.map(data => data.min_price);
+    const maxPriceOfPaddy = paddyData.map(data => data.max_price);
+    const modalPriceOfPaddy = paddyData.map(data => data.modal_price);
+    const districtPaddyData = paddyData.map(data => data.district);
+
+    const minPriceOfTomato = tomatoData.map(data => data.min_price);
+    const maxPriceOfTomato = tomatoData.map(data => data.max_price);
+    const modalPriceOfTomato = tomatoData.map(data => data.modal_price);
+    const districtTomatoData = tomatoData.map(data => data.district);
 
     const soilFertilityArray1 = plotData1.map(ele => ele.soil_fertility);
     const totalRevenueArray1 = plotData1.map(ele => ele.total_revenue);
@@ -68,8 +78,41 @@ class App extends React.PureComponent {
     const revenueDueToGram2 = plotData2.map(ele => ele.revenue_earned_from_gram);
     const totalRevenueArray2 = plotData2.map(ele => ele.total_revenue);
 
+    const data4 = {
+      labels: districtPaddyData,
+      datasets: [
+        {
+          label: "MinPriceOfPaddy(in INR)",
+          data: minPriceOfPaddy,
+          borderColor: ['rgba(100,206,86,0.2'],
+          backgroundColor: ['rgba(100,206,86,0.2'],
+          pointBorderColor: ['rgba(100,206,86,0.2'],
+          pointBackgroundColor: ['rgba(100,206,86,0.2'],
+          pointHoverRadius: 5
+        },
+        {
+          label: "MaxPriceOfPaddy(in INR)",
+          data: maxPriceOfPaddy,
+          borderColor: ['rgba(400,100,50,0.2'],
+          backgroundColor: ['rgba(400,100,50,0.2'],
+          pointBorderColor: ['rgba(400,100,50,0.2'],
+          pointBackgroundColor: ['rgba(400,100,50,0.2'],
+          pointHoverRadius: 5
+        },
+        {
+          label: "ModalPriceOfPaddy(in INR)",
+          data: modalPriceOfPaddy,
+          borderColor: ['rgba(200,206,86,0.2'],
+          backgroundColor: ['rgba(200,206,86,0.2'],
+          pointBorderColor: ['rgba(200,206,86,0.2'],
+          pointBackgroundColor: ['rgba(200,206,86,0.2'],
+          pointHoverRadius: 5
+        }
+
+      ]
+    }
     const data3 = {
-      labels: districtData,
+      labels: districtTomatoData,
       datasets: [
         {
           label: "MinPriceOfTomato(in INR)",
@@ -102,6 +145,31 @@ class App extends React.PureComponent {
       ]
     }
 
+    const options4 = {
+      title: {
+        display: true,
+        text: "Variations in prices(in INR) of paddy in various markets"
+      },
+      scales: {
+        yAxes: [
+          {
+            scaleLabel: {
+              display: true,
+              labelString: 'Price per 100kg'
+            },
+            ticks: {
+              min: 0,
+            }
+          }
+        ],
+        xAxes: [{
+          scaleLabel: {
+            display: true,
+            labelString: 'Districts'
+          }
+        }]
+      }
+    }
     const options3 = {
       title: {
         display: true,
@@ -217,6 +285,9 @@ class App extends React.PureComponent {
         </div>
         <div className="chart3" id="chart">
           <ChartComponent data={data3} options={options3} />
+        </div>
+        <div className="chart4" id="chart">
+          <ChartComponent data={data4} options={options4} />
         </div>
         <h1 className="built-using" id="built-using">Built Using ReactJS, NodeJS, NPM</h1>
         <div className="icon" >
