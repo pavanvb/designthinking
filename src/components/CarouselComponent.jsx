@@ -6,7 +6,8 @@ import './components.styles.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel } from 'react-bootstrap'
 
-function CarouselComponent() {
+function CarouselComponent(props) {
+    console.log("CarouselComponent");
     return (
         <>
             <center>
@@ -54,7 +55,7 @@ function CarouselComponent() {
     )
 }
 
-export default CarouselComponent
+export default React.memo(CarouselComponent)
 
             // <Carousel className="c-outer">
             //     <Carousel.Item className="c-item-1">

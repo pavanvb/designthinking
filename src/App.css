@@ -1,7 +1,7 @@
 .App{
     margin-top: 0px;
     width: auto;
-    height: 1700px;
+    height: 3070px;
     
       background: linear-gradient(
     to left,
@@ -11,23 +11,49 @@
  
 }
 
-.head1{
-  margin-top: 30vh;
-  margin-left: 32vw;
-  font-family: "Bigelow Rules";
-  position: absolute;
-  font-size: 7vw;
-}
-
-.particles{
+/* .particles{
   z-index: -1;
   background-size: cover;
-}
+} */
 .chart1{
   position: absolute;
-  margin-top: 180px;
-  margin-left: 100px;
+  margin-top: 230px;
+  margin-left: 150px;
   width:720px;
   height:400px;
   background-color: aliceblue;
 }
+.chart2{
+  position: absolute;
+  margin-top: 230px;
+  margin-left: 1200px;
+  width:720px;
+  height:400px;
+  background-color: aliceblue;
+}
+
+.chart3{
+  position: absolute;
+  margin-top: 730px;
+  margin-left: 550px;
+  width:1000px;
+  height:550px;
+  background-color: aliceblue;
+}
+
+.icon{
+  margin-left: 800px;
+  margin-top: 1650px;
+  position: absolute;
+}
+
+
+.built-using{
+  position: absolute;
+  margin-top: 1400px;
+  margin-left: 20vw;
+  font-family: "Bigelow Rules";
+  font-size: 7vw;
+  color: white;
+}
+

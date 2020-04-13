@@ -2,14 +2,15 @@ import React from 'react'
 import { Particles } from 'react-particles-js'
 import './components.styles.css';
 
-function ParticelsComponent() {
+function ParticlesComponent(props) {
+    console.log("ParticlesComponent");
     return (
         <div>
             <Particles className="particles"
                 params={{
                     "particles": {
                         "number": {
-                            "value": 200
+                            "value": 300
                         },
                         "size": {
                             "value": 4
@@ -26,11 +27,11 @@ function ParticelsComponent() {
                     }
                 }
                 }
-                width= "1800px"
-            height="170vh"
+                width= "2100px"
+            height="260vh"
             />
         </div>
     )
 }
 
-export default ParticelsComponent
+export default React.memo(ParticlesComponent)

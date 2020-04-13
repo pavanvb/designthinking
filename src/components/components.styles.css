@@ -6,24 +6,25 @@
     margin-right: 150px; */
     align-items: center;
     margin-top:-800px;
-    margin-left: 410px;
-    width: 1024px;
-    height: 700px;
+    margin-left: 530px;
+    width: 1224px;
+    height: auto;
     background:linear-gradient(
         to left,
         rgba(7,27,82,1) 0%,
+         
         rgba(0,128,128,1) 100%
       );
 }
 
 .c-item{
-    width: 1024px;
+    width: 1224px;
     height: 720px;
 }
 
 .c-img{
-    width: 1024px;
-    height: 570px;
+    width: 1224px;
+    height: 550px;
 }
 
 .text{
@@ -35,10 +36,12 @@
 
 /*HeadingComponent start*/
 .head1{
-    font-family: "Bigelow Rules";
-    position: absolute;
-    color: white;
-    margin-top: -10px;
+  position: absolute;
+  margin-top: 0px;
+  margin-left: 28vw;
+  font-family: "Bigelow Rules";
+  font-size: 7vw;
+  color: white;
 }
 /*HeadingCompenent end*/
 
@@ -46,8 +49,9 @@
 .particles{
     z-index: -1;
     background-size: cover;
-    height:1024px;
+    height:100vh;
     width:auto;
+    margin-left: 50px;
     /* position: absolute; */
   }
 /*ParticlesComponent end*/
@@ -67,6 +71,29 @@
     font-size: 2vh;
     font-weight: bold;
 }
-
-
 /*NavBarComponent end*/
+
+/*AboutUsComponent start*/
+.aboutus{
+    background:linear-gradient(
+        to left,
+        rgba(7,27,82,1) 0%,
+        rgba(0,128,128,1) 100%
+      );
+    
+}
+/*AboutUsComponent end*/
+ /*IconComponent start*/
+
+ .fareact{
+     padding-right: 40px;
+ }
+ .fanode{
+    padding-right: 40px;
+}
+.fanpm{
+    padding-right: 40px;
+}
+
+ /*IconComponent end*/
+

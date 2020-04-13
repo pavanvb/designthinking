@@ -2,8 +2,10 @@ import React from 'react'
 import './components.styles.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Navbar, NavDropdown, Nav } from 'react-bootstrap'
+import {FaGoogle,FaBootstrap,FaYoutube} from 'react-icons/fa'
 
-function NavBarComponent() {
+function NavBarComponent(props) {
+    console.log("NavBarComponent");
     return (
         <>
             <Navbar className="navbar" expand="lg">
@@ -12,10 +14,11 @@ function NavBarComponent() {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
                         <Nav.Link href="#chart" className="text1">DataPlots</Nav.Link>
+                        <Nav.Link href="#built-using" className="text1">Build Info.</Nav.Link>
                         <NavDropdown title="Links" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="https://www.google.com/" className="text1">Google</NavDropdown.Item>
-                            <NavDropdown.Item href="https://react-bootstrap.github.io/" className="text1">React Bootstrap</NavDropdown.Item>
-                            <NavDropdown.Item href="https://www.youtube.com/" className="text1">YouTube</NavDropdown.Item>
+                            <NavDropdown.Item href="https://www.google.com/" className="text1">Google <FaGoogle/></NavDropdown.Item>
+                            <NavDropdown.Item href="https://react-bootstrap.github.io/" className="text1">React Bootstrap <FaBootstrap/></NavDropdown.Item>
+                            <NavDropdown.Item href="https://www.youtube.com/" className="text1">YouTube <FaYoutube/></NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>
@@ -24,4 +27,4 @@ function NavBarComponent() {
     )
 }
 
-export default NavBarComponent
+export default React.memo(NavBarComponent)
